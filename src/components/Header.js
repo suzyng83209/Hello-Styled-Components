@@ -7,8 +7,7 @@ const Header = styled.div`
   justify-content: center;
   align-items: center;
   height: 240px;
-  padding: 24px;
-  padding-bottom: 30px;
+  padding: 60px 24px 30px;
   color: white;
   text-align: center;
 `;
