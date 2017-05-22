@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import MyHeader from './components/Header';
 import logo from "./logo.svg";
 import "./App.css";
 
@@ -8,6 +9,7 @@ class App extends Component {
   render() {
     return (
       <Container>
+        <MyHeader />
         <Header>
           <Rotate360>
             <img src={logo} className="App-logo" alt="logo" />
