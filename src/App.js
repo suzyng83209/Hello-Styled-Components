@@ -1,25 +1,29 @@
 import React, { Component } from "react";
-import styled from 'styled-components';
-import MyHeader from './components/Header';
-import logo from "./logo.svg";
+import styled from "styled-components";
+
+import MyHeader from "./components/Header";
+import TopNav from "./components/TopNav";
 
 const Container = styled.div`
-  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100vh;
 `;
 
 const Content = styled.div`
-  max-width: 1024px;
+  overflow: auto;
+  width: 100%;
 `;
 
 class App extends Component {
   render() {
     return (
       <Container>
-        <MyHeader />
-        <Content />
+        <TopNav />
+        <Content>
+          <MyHeader />
+        </Content>
       </Container>
     );
   }

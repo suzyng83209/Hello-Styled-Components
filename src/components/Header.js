@@ -11,7 +11,6 @@ const Header = styled.div`
   padding-bottom: 30px;
   color: white;
   text-align: center;
-  width: 100%;
 `;
 
 const NameWrapper = styled.div`
