@@ -3,16 +3,22 @@ import styled from "styled-components";
 
 const Header = styled.div`
   background-color: #222;
-  height: 144px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 240px;
   padding: 24px;
+  padding-bottom: 30px;
   color: white;
   text-align: center;
+  width: 100%;
 `;
 
 const NameWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   cursor: pointer;
 `;
 
@@ -25,8 +31,11 @@ const Name = styled.div`
   pointer-events: none;
 `;
 
-const NickName = styled(Name)`
-  color: aqua;
+const Separator = styled.div`
+  height: 4px;
+  width: 4px;
+  background: aqua;
+  transform: rotate(45deg);
 `;
 
 class MyHeader extends React.Component {
@@ -42,7 +51,9 @@ class MyHeader extends React.Component {
         onMouseOut={this.setNameInvisible}
       >
         <Name>Chuqian</Name>
-        {this.state.nameVisible && <Name color="aqua">Susan</Name>}
+        {this.state.nameVisible
+          ? <Name color="aqua">Susan</Name>
+          : <Separator />}
         <Name bold>Li</Name>
       </NameWrapper>
     </Header>
